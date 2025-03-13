@@ -1,0 +1,61 @@
+/* VoiceTyping.css */
+
+.voice-typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .mic-btn, .stop-btn {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mic-btn:disabled, .stop-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .mic-btn:hover:not(:disabled), .stop-btn:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .text-output {
+    width: 92%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+  }
+  

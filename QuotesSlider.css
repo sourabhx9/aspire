@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+
+/* Smooth gradient background animation */
+@keyframes changeBackground {
+  0% { background: #cce5ff; }   
+  25% { background: #ffecb3; }  
+  50% { background: #d4edda; }  
+  75% { background: #ffecb3; }  
+  100% { background: #cce5ff; } 
+}
+
+/* ==================== QUOTES SECTION ==================== */
+.quotes-slider-container {
+  width: 100%;
+  max-width: 700px;  /* Reduced max-width */
+  margin: 40px auto; /* Added spacing above and below */
+  padding: 20px;
+  border-radius: 10px; /* Smaller border radius */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Lighter, softer border */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: changeBackground 15s infinite linear;
+}
+
+/* Quote Card */
+.quotes-card {
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px; /* Even smaller border radius */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+  text-align: center;
+  opacity: 0.95;
+  position: relative;
+  height: 140px; /* Reduced height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Quote Text */
+.quote-text {
+  font-size: 20px; /* Slightly smaller */
+  font-weight: 600;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Author Text */
+.quote-author {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  color: #4169e1;
+}
+
+/* Navigation Buttons */
+.shift-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Left Button */
+.shift-button.left {
+  left: -50px; /* Moves it fully to the left */
+}
+
+/* Right Button */
+.shift-button.right {
+  right: -50px; /* Moves it fully to the right */
+}
+
+/* Button Icons */
+.icon {
+  width: 28px; /* Reduced icon size */
+  height: 28px;
+  color: rgb(6, 40, 1);
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+  .quotes-slider-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .shift-button.left {
+    left: -40px;
+  }
+
+  .shift-button.right {
+    right: -40px;
+  }
+
+  .quote-text {
+    font-size: 18px;
+  }
+
+  .quote-author {
+    font-size: 14px;
+  }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .quotes-slider-container {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .shift-button.left {
+    left: -30px;
+  }
+
+  .shift-button.right {
+    right: -30px;
+  }
+
+  .quote-text {
+    font-size: 16px;
+  }
+
+  .quote-author {
+    font-size: 13px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
